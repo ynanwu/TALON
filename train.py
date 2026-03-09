@@ -35,6 +35,7 @@ class Args(Tap):
     seed: int = 1028  # 随机种子
     dataset_name: DatasetName = "cub"  # 数据集
     backbone: Literal["clip", "dino"] = "clip"
+    tta_state: Literal["M", "P", "M+P", None] = "M+P"
     device: str = ""
     tau: float = 0.75
 
@@ -247,6 +248,7 @@ def main(args: Args):
 
     trainer = Trainer(
         tau=args.tau,
+        tta_state=args.tta_state,
         epochs=args.epochs,
         train_classes=args.train_classes,
         unlabel_classes=args.unlabel_classes,

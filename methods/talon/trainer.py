@@ -31,6 +31,7 @@ class Trainer:
     def __init__(
         self,
         tau: float,
+        tta_state: Literal["M", "P", "M+P", None],
         epochs: int,
         train_classes: list,
         unlabel_classes: list,
@@ -41,6 +42,7 @@ class Trainer:
         checkpoint_dir: Optional[str] = None,
     ):
         self.tau = tau
+        self.tta_state = tta_state
         self.epochs = epochs
         self.train_classes = train_classes
         self.unlabel_classes = unlabel_classes
@@ -122,7 +124,10 @@ class Trainer:
             for name, p in m.named_parameters(recurse=False)
             if name in ["weight", "bias"] and p.requires_grad
         ]
-        self.model_tta_optimizer = torch.optim.SGD(self.model_tta_params, lr=1e-1)
+        if enc == "clip":
+            self.model_tta_optimizer = torch.optim.SGD(self.model_tta_params, lr=1e-1)
+        else:
+            self.model_tta_optimizer = torch.optim.SGD(self.model_tta_params, lr=1e-2)
 
     def model_tta(
         self,
@@ -421,6 +426,7 @@ class Trainer:
                     test_loader=loader_test_unlabelled,
                     tau=self.tau,
                     protos=P_ncm,
+                    tta_state=self.tta_state,
                 )
             )
 
