@@ -8,7 +8,7 @@
 
 <div>
     <h4 align="center">
-        • <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target='_blank'>[arXiv submitting]</a> •
+        • <a href="https://arxiv.org/abs/2603.08075" target='_blank'>[arXiv]</a> •
     </h4>
 </div>
 
