@@ -9,6 +9,7 @@
 <div>
     <h4 align="center">
         • <a href="https://arxiv.org/abs/2603.08075" target='_blank'>[arXiv]</a> •
+        • <a href="https://huggingface.co/papers/2603.08075" target='_blank'>[Hugging Face]</a> •
     </h4>
 </div>
 
@@ -82,7 +83,7 @@ uv sync
 
 We provide pretrained checkpoints for **CUB**, **Food-101**, and **Stanford Cars** using both CLIP and DINO backbones.
 
-📥 Download from [**Google Drive**](https://drive.google.com/drive/folders/11O7OtYzBzRT6rrSjhl3u3SOdHxu8kqIK) and place them as follows:
+📥 Download from [**Google Drive**](https://drive.google.com/drive/folders/11O7OtYzBzRT6rrSjhl3u3SOdHxu8kqIK) or [**Hugging Face**](https://huggingface.co/conrain/TALON) and place them as follows:
 
 ```
 checkpoints/
