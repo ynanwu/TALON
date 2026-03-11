@@ -9,7 +9,6 @@
 <div>
     <h4 align="center">
         • <a href="https://arxiv.org/abs/2603.08075" target='_blank'>[arXiv]</a> •
-        • <a href="https://huggingface.co/papers/2603.08075" target='_blank'>[Hugging Face]</a> •
     </h4>
 </div>
 
