@@ -318,6 +318,7 @@ def main(args: Args):
 
     trainer = Trainer(
         tau=float(args.tau),
+        tta_state=args.tta_state,
         epochs=1,
         train_classes=args.train_classes,
         unlabel_classes=args.unlabel_classes,
