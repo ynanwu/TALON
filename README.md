@@ -19,6 +19,11 @@
 
 </div>
 
+[![Papers with Code: SOTA on CIFAR-10](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge.svg?eval=22140&live=1)](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge-link?eval=22140)
+[![Papers with Code: SOTA on CIFAR-100](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge.svg?eval=22141&live=1)](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge-link?eval=22141)
+[![Papers with Code: SOTA on Food-101](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge.svg?eval=22142&live=1)](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge-link?eval=22142)
+[![Papers with Code: SOTA on Stanford Cars](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge.svg?eval=22143&live=1)](https://paperswithcode.co/api/v1/papers/2603.08075/leaderboard-badge-link?eval=22143)
+
 ## 💡 TL;DR
 > *TALON is a novel approach for on-the-fly category discovery (OCD) that utilizes a test-time adaptation framework to continuously learn from unlabeled data streams. This repository contains the official implementation of our CVPR 2026 paper.*
 
