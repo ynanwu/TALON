@@ -579,11 +579,6 @@ class Trainer:
                 preds.append(pred_i)
                 preds_batch.append(pred_i)
 
-            # model TTA
-            if tta_state == "M" or tta_state == "M+P":
-                _y_i = torch.tensor(preds_batch, device=device, dtype=torch.long)
-                self.model_tta(images, _y_i, P)
-
             # # # proto TTA 自适应 START
             if tta_state == "P" or tta_state == "M+P":
                 ema_new, ema_known = 0.3, 0.06
@@ -615,6 +610,11 @@ class Trainer:
 
                     P[j] = F.normalize((1.0 - alpha) * P[j] + alpha * mean_j, dim=-1)
             # proto tta 自适应 END
+
+            # model TTA
+            if tta_state == "M" or tta_state == "M+P":
+                _y_i = torch.tensor(preds_batch, device=device, dtype=torch.long)
+                self.model_tta(images, _y_i, P)
 
             P = F.normalize(P, dim=-1)
 
